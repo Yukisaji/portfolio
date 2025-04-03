@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>ポートフォリオ</title>
-<meta name="keywords" content="ページのキーワードA,B,C">
-<meta name="description" content="ページの説明">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオサイト</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="outer">
-<header><div id="header-container"><div id="head-inner"><h1>ポートフォリオ</h1>
-<p class="description">あなたのＨＰの説明文</p></div></div>
-</header>
-<div id="content-wrapper">
-<main>
-<div id="inner">
-<h2>記事ページ見出し・大</h2>
-<p>文章あれこれ</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">プロフィール</a></li>
+                <li><a href="#skills">スキル</a></li>
+                <li><a href="#works">制作物</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <hr class="section-line">
+    </header>
+    <section id="about">
+        <h1>プロフィール</h1>
+        <!-- <hr class="section-line"> -->
+        <p>あなたの自己紹介をここに記述します。</p>
+        
+    </section>
+    <section id="skills">
+        <h1>スキル</h1>
+        <!-- <hr class="section-line"> -->
+        <p>あなたのスキルセットをここに記述します。</p>
+    </section>
+    <section id="works">
+        <h1>制作物</h1>
+        <!-- <hr class="section-line"> -->
+        <p>これまでの制作物をここに紹介します。</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RkGyBcRSy1g?si=Zgwk9dbNivQibi4G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RkGyBcRSy1g?si=Zgwk9dbNivQibi4G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<h3>記事ページ見出し・中</h3>
-<p>文章あれこれ</p>
-<h4>記事ページ見出し・小</h4>
-<p>文章あれこれ</p>
-</div>
-</main>
-<aside>
-<div id="middle-inner">
-<div class="side-title">menu</div>
-<div class="side">
-<ul>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-</ul>
-</div>
-</div>
-</aside>
-</div>
-<footer>© 2010 あなたのホームページ</footer>
-</div></body>
+    </section>
+    <section id="contact">
+        <h1>お問い合わせ</h1>
+        <!-- <hr class="section-line"> -->
+        <form>
+            <label for="name">名前:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">メール:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">メッセージ:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">送信</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 yukisaji</p>
+    </footer>
+</body>
 </html>
