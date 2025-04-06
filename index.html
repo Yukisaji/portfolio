@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオサイト</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
@@ -16,25 +16,46 @@
                 <li><a href="#contact">お問い合わせ</a></li>
             </ul>
         </nav>
-        <hr class="section-line">
+        <hr class="header-line">
     </header>
     <section id="about">
         <h1>プロフィール</h1>
-        <!-- <hr class="section-line"> -->
-        <p>あなたの自己紹介をここに記述します。</p>
-        
+        <p>金属加工機械の製造会社にて約10年間勤務。<br>
+            加工機械システム開発に制御ソフト設計として携わり、C#／C++による制御アプリ開発、Windowsアプリやロボット操作パネルのUI設計、PLC・ラダーを用いた装置システム開発を担当。<br>
+            2024年9月からVRプロフェッショナルアカデミーのVRエキスパートコースを受講し、PUN2や空間アンカーを活用したMRマルチプレイコンテンツ開発にも従事しています。</p>
     </section>
     <section id="skills">
-        <h1>スキル</h1>
-        <!-- <hr class="section-line"> -->
-        <p>あなたのスキルセットをここに記述します。</p>
+        <h1 class="accordion-toggle">
+          <span class="arrow">▶</span> スキル
+        </h1>
+        <div class="accordion-content">
+          <p>あなたのスキルセットをここに記述します。</p>
+        </div>
     </section>
     <section id="works">
         <h1>制作物</h1>
-        <!-- <hr class="section-line"> -->
-        <p>これまでの制作物をここに紹介します。</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/RkGyBcRSy1g?si=Zgwk9dbNivQibi4G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+        <div class="works-grid">
+            <div class="work-item">
+                <img src="images/work-XRLayoutPlanner.png" alt="XRLayoutPlanner">
+                <p>作品1の説明</p>
+            </div>
+            <div class="work-item">
+                <img src="images/image2.jpg" alt="作品2">
+                <p>作品2の説明</p>
+            </div>
+            <div class="work-item">
+                <img src="images/image3.jpg" alt="作品3">
+                <p>作品3の説明</p>
+            </div>
+            <div class="work-item">
+                <img src="images/work4.jpg" alt="作品4">
+                <p>作品4</p>
+            </div>
+            <div class="work-item">
+                <img src="images/work5.jpg" alt="作品5">
+                <p>作品5</p>
+            </div>
+        </div>
     </section>
     <section id="contact">
         <h1>お問い合わせ</h1>
@@ -52,5 +73,16 @@
     <footer>
         <p>&copy; 2025 yukisaji</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggle = document.querySelector(".accordion-toggle");
+          const content = document.querySelector(".accordion-content");
+      
+          toggle.addEventListener("click", () => {
+            content.classList.toggle("open");
+            toggle.classList.toggle("open");
+          });
+        });
+    </script>
 </body>
 </html>
