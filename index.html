@@ -24,42 +24,76 @@
             加工機械システム開発に制御ソフト設計として携わり、C#／C++による制御アプリ開発、Windowsアプリやロボット操作パネルのUI設計、PLC・ラダーを用いた装置システム開発を担当。<br>
             2024年9月からVRプロフェッショナルアカデミーのVRエキスパートコースを受講し、PUN2や空間アンカーを活用したMRマルチプレイコンテンツ開発にも従事しています。</p>
     </section>
-    <section id="skills">
+    <!-- <section id="skills">
         <h1 class="accordion-toggle">
           <span class="arrow">▶</span> スキル
         </h1>
         <div class="accordion-content">
           <p>あなたのスキルセットをここに記述します。</p>
         </div>
-    </section>
+    </section> -->
+    <!-- <section id="works1">
+        <h1 class="accordion-toggle">
+          <span class="arrow">▶</span> 制作物
+        </h1>
+        <div class="accordion-content">
+          <p>あなたの制作物をここに記述します。</p>
+        </div>
+    </section> -->
     <section id="works">
         <h1>制作物</h1>
         <div class="works-grid">
             <div class="work-item">
-                <img src="images/work-XRLayoutPlanner.png" alt="XRLayoutPlanner">
-                <p>作品1の説明</p>
+                <div class="work-media">
+                    <p class="work-title">XR Layout Planner</p>
+                    <img src="images/work-XRLayoutPlanner.png" alt="XRLayoutPlanner">
+                </div>
+                <div class="work-detail">
+                    <p class="work-detail-heading">概要</p>
+                    <p>VRアカデミーのVRフェスで作成した、工場の機械レイアウトをMR上で検討する営業向けツールです。</p>
+                        
+                    <p class="work-detail-heading">特徴的な機能</p>
+                    <ul>
+                        <li>MR空間上に機械モデルを設置</li>
+                        <li>PUN2による複数Quest間のオブジェクト同期</li>
+                        <li>空間アンカーで各Quest間の位置合わせ</li>
+                        <li>他ヘッドセット位置にアバターを重ね合わせ表示</li>
+                        <li>ユーザー向け自動追従UIの実装</li>
+                        <li>VRoid Studioを用いた3Dアバター作成</li>
+                    </ul>
+                        
+                    <p class="work-detail-heading">使用言語など</p>
+                    <p>Unity, C#, Meta XR SDK, All-in-One SDK, VRoid Studio</p>
+                </div>
             </div>
             <div class="work-item">
-                <img src="images/image2.jpg" alt="作品2">
-                <p>作品2の説明</p>
+                <div class="work-media">
+                    <p class="work-title">作品2の説明</p>
+                    <img src="images/image2.jpg" alt="作品2">
+                </div>
+                <div class="work-detail">
+                    <p>ここに作品2の詳細な説明文を記載します。</p>
+                </div>
             </div>
-            <div class="work-item">
-                <img src="images/image3.jpg" alt="作品3">
+            <!-- <div class="work-item">
                 <p>作品3の説明</p>
+                <img src="images/image2.jpg" alt="作品3">
+                
             </div>
             <div class="work-item">
-                <img src="images/work4.jpg" alt="作品4">
-                <p>作品4</p>
+                <p>作品4の説明</p>
+                <img src="images/image2.jpg" alt="作品4">
+                
             </div>
             <div class="work-item">
-                <img src="images/work5.jpg" alt="作品5">
-                <p>作品5</p>
-            </div>
+                <p>作品5の説明</p>
+                <img src="images/image2.jpg" alt="作品5">
+                
+            </div> -->
         </div>
     </section>
     <section id="contact">
         <h1>お問い合わせ</h1>
-        <!-- <hr class="section-line"> -->
         <form>
             <label for="name">名前:</label>
             <input type="text" id="name" name="name" required>
@@ -81,6 +115,48 @@
           toggle.addEventListener("click", () => {
             content.classList.toggle("open");
             toggle.classList.toggle("open");
+          });
+        });
+    </script>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const workItems = document.querySelectorAll(".work-item");
+      
+          workItems.forEach(item => {
+            item.addEventListener("click", () => {
+              // すでに展開中なら閉じる
+              if (item.classList.contains("expanded")) {
+                item.classList.remove("expanded");
+              } else {
+                // 他の展開中のアイテムを閉じる
+                workItems.forEach(i => i.classList.remove("expanded"));
+                // クリックしたアイテムを展開
+                item.classList.add("expanded");
+              }
+            });
+          });
+        });
+    </script> -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const workItems = document.querySelectorAll(".work-item");
+      
+          workItems.forEach(item => {
+            item.addEventListener("click", () => {
+              // クリックしたアイテムの expanded クラスをトグル
+              item.classList.toggle("expanded");
+            });
+          });
+        });
+    </script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const workItems = document.querySelectorAll(".work-item");
+      
+          workItems.forEach(item => {
+            item.addEventListener("click", () => {
+              item.classList.toggle("expanded");
+            });
           });
         });
     </script>
