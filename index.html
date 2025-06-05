@@ -1,164 +1,106 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ポートフォリオサイト</title>
-    <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオサイト</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">プロフィール</a></li>
-                <li><a href="#skills">スキル</a></li>
-                <li><a href="#works">制作物</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-            </ul>
-        </nav>
-        <hr class="header-line">
-    </header>
-    <section id="about">
-        <h1>プロフィール</h1>
-        <p>金属加工機械の製造会社にて約10年間勤務。<br>
-            加工機械システム開発に制御ソフト設計として携わり、C#／C++による制御アプリ開発、Windowsアプリやロボット操作パネルのUI設計、PLC・ラダーを用いた装置システム開発を担当。<br>
-            2024年9月からVRプロフェッショナルアカデミーのVRエキスパートコースを受講し、PUN2や空間アンカーを活用したMRマルチプレイコンテンツ開発にも従事しています。</p>
-    </section>
-    <!-- <section id="skills">
-        <h1 class="accordion-toggle">
-          <span class="arrow">▶</span> スキル
-        </h1>
-        <div class="accordion-content">
-          <p>あなたのスキルセットをここに記述します。</p>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">プロフィール</a></li>
+        <li><a href="#skills">スキル</a></li>
+        <li><a href="#works">制作物</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    <hr class="header-line">
+  </header>
+
+  <section id="about">
+    <h1>プロフィール</h1>
+    <p>
+      金属加工機械の製造会社にて約10年間勤務。<br>
+      加工機械システム開発に制御ソフト設計として携わり、C#／C++による制御アプリ開発、Windowsアプリやロボット操作パネルのUI設計、PLC・ラダーを用いた装置システム開発を担当。<br>
+      2024年9月からVRプロフェッショナルアカデミーのVRエキスパートコースを受講し、PUN2や空間アンカーを活用したMRマルチプレイコンテンツ開発にも従事しています。
+    </p>
+  </section>
+
+  <section id="works">
+    <h1>制作物</h1>
+    <div class="works-grid">
+      <div class="work-item">
+        <div class="work-media">
+          <p class="work-title">XR Layout Planner</p>
+          <img src="images/work-XRLayoutPlanner.png" alt="XRLayoutPlanner">
         </div>
-    </section> -->
-    <!-- <section id="works1">
-        <h1 class="accordion-toggle">
-          <span class="arrow">▶</span> 制作物
-        </h1>
-        <div class="accordion-content">
-          <p>あなたの制作物をここに記述します。</p>
+        <div class="work-detail">
+          <p class="work-detail-heading">概要</p>
+          <p>VRアカデミーのVRフェスで作成した、工場の機械レイアウトをMR上で検討する営業向けツールです。</p>
+          <p class="work-detail-heading">特徴的な機能</p>
+          <ul>
+            <li>MR空間上に機械モデルを設置</li>
+            <li>PUN2による複数Quest間のオブジェクト同期</li>
+            <li>空間アンカーで各Quest間の位置合わせ</li>
+            <li>他ヘッドセット位置にアバターを重ね合わせ表示</li>
+            <li>ユーザー向け自動追従UIの実装</li>
+            <li>VRoid Studioを用いた3Dアバター作成</li>
+          </ul>
+          <p class="work-detail-heading">使用言語、ツール</p>
+          <p>Unity, C#, Meta XR SDK, All-in-One SDK, VRoid Studio</p>
         </div>
-    </section> -->
-    <section id="works">
-        <h1>制作物</h1>
-        <div class="works-grid">
-            <div class="work-item">
-                <div class="work-media">
-                    <p class="work-title">XR Layout Planner</p>
-                    <img src="images/work-XRLayoutPlanner.png" alt="XRLayoutPlanner">
-                </div>
-                <div class="work-detail">
-                    <p class="work-detail-heading">概要</p>
-                    <p>VRアカデミーのVRフェスで作成した、工場の機械レイアウトをMR上で検討する営業向けツールです。</p>
-                        
-                    <p class="work-detail-heading">特徴的な機能</p>
-                    <ul>
-                        <li>MR空間上に機械モデルを設置</li>
-                        <li>PUN2による複数Quest間のオブジェクト同期</li>
-                        <li>空間アンカーで各Quest間の位置合わせ</li>
-                        <li>他ヘッドセット位置にアバターを重ね合わせ表示</li>
-                        <li>ユーザー向け自動追従UIの実装</li>
-                        <li>VRoid Studioを用いた3Dアバター作成</li>
-                    </ul>
-                        
-                    <p class="work-detail-heading">使用言語など</p>
-                    <p>Unity, C#, Meta XR SDK, All-in-One SDK, VRoid Studio</p>
-                </div>
-            </div>
-            <div class="work-item">
-                <div class="work-media">
-                    <p class="work-title">作品2の説明</p>
-                    <img src="images/image2.jpg" alt="作品2">
-                </div>
-                <div class="work-detail">
-                    <p>ここに作品2の詳細な説明文を記載します。</p>
-                </div>
-            </div>
-            <!-- <div class="work-item">
-                <p>作品3の説明</p>
-                <img src="images/image2.jpg" alt="作品3">
-                
-            </div>
-            <div class="work-item">
-                <p>作品4の説明</p>
-                <img src="images/image2.jpg" alt="作品4">
-                
-            </div>
-            <div class="work-item">
-                <p>作品5の説明</p>
-                <img src="images/image2.jpg" alt="作品5">
-                
-            </div> -->
+      </div>
+      <div class="work-item">
+        <div class="work-media">
+          <p class="work-title">作品2の説明</p>
+          <img src="images/image2.jpg" alt="作品2">
         </div>
-    </section>
-    <section id="contact">
-        <h1>お問い合わせ</h1>
-        <form>
-            <label for="name">名前:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">メール:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">メッセージ:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">送信</button>
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2025 yukisaji</p>
-    </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const toggle = document.querySelector(".accordion-toggle");
-          const content = document.querySelector(".accordion-content");
-      
-          toggle.addEventListener("click", () => {
-            content.classList.toggle("open");
-            toggle.classList.toggle("open");
-          });
+        <div class="work-detail">
+          <p>ここに作品2の詳細な説明文を記載します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>お問い合わせ</h1>
+    <form>
+      <label for="name">名前:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">メール:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">メッセージ:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">送信</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 yukisaji</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // アコーディオン
+      const toggle = document.querySelector(".accordion-toggle");
+      const content = document.querySelector(".accordion-content");
+      if (toggle && content) {
+        toggle.addEventListener("click", () => {
+          content.classList.toggle("open");
+          toggle.classList.toggle("open");
         });
-    </script>
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const workItems = document.querySelectorAll(".work-item");
-      
-          workItems.forEach(item => {
-            item.addEventListener("click", () => {
-              // すでに展開中なら閉じる
-              if (item.classList.contains("expanded")) {
-                item.classList.remove("expanded");
-              } else {
-                // 他の展開中のアイテムを閉じる
-                workItems.forEach(i => i.classList.remove("expanded"));
-                // クリックしたアイテムを展開
-                item.classList.add("expanded");
-              }
-            });
-          });
+      }
+
+      // 制作物の展開トグル
+      const workItems = document.querySelectorAll(".work-item");
+      workItems.forEach(item => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("expanded");
         });
-    </script> -->
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const workItems = document.querySelectorAll(".work-item");
-      
-          workItems.forEach(item => {
-            item.addEventListener("click", () => {
-              // クリックしたアイテムの expanded クラスをトグル
-              item.classList.toggle("expanded");
-            });
-          });
-        });
-    </script> -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const workItems = document.querySelectorAll(".work-item");
-      
-          workItems.forEach(item => {
-            item.addEventListener("click", () => {
-              item.classList.toggle("expanded");
-            });
-          });
-        });
-    </script>
+      });
+    });
+  </script>
 </body>
 </html>
