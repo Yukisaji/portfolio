@@ -8,6 +8,7 @@
   /* 基本設定 */
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px;
   }
   
   body {
@@ -15,7 +16,8 @@
     background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
-    padding-top: 60px;
+    /* padding-top: 60px; */
+    margin-top: 60px;
   }
   
   /* ヘッダー */
@@ -65,8 +67,7 @@
     max-width: 1000px;
     margin: auto;
   }
-  
-  /* h1のスタイル */
+   
   h1 {
     font-size: 2em;
     margin-bottom: 10px;
@@ -161,14 +162,14 @@
   /* タイトル：通常は左寄せ。展開時はwork-media内で中央揃え */
   .work-title {
     font-weight: bold;
-    margin: 10px 0 5px;
+    font-size: 0.9em;
+    margin: 0 0 0;
     text-align: left;
     transition: inherit;
   }
   
-  .work-item.expanded .work-media .work-title {
+  .work-item.expanded .work-media {
     width: 50%;
-    /* 調整例：画像左端に合わせるため、左マージンを調整 */
     margin: 0 0 0 0;
     text-align: left;
   }
@@ -188,7 +189,7 @@
   .work-detail-heading {
     font-weight: bold;
     margin: 10px 0 5px;
-    font-size: 1.2em;
+    font-size: 1.0em;
   }
   
   /* work-detail内リスト：黒丸 */
