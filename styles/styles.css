@@ -162,7 +162,7 @@
   /* タイトル：通常は左寄せ。展開時はwork-media内で中央揃え */
   .work-title {
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1.0em;
     margin: 0 0 0;
     text-align: left;
     transition: inherit;
