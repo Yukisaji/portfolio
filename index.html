@@ -127,6 +127,23 @@
       workItems.forEach(item => {
         item.addEventListener("click", () => {
           item.classList.toggle("expanded");
+          
+          // 展開時にその位置までスクロール
+          if (item.classList.contains("expanded")) {
+            // 展開アニメーション完了を待つ
+            setTimeout(() => {
+              // ヘッダーの高さを考慮してオフセットを設定
+              const headerOffset = 70;
+              const elementPosition = item.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              
+              // スムーズスクロール
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+              });
+            }, 150); // CSSのtransition時間に合わせる
+          }
         });
       });
     });
