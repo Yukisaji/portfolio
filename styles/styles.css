@@ -160,6 +160,8 @@
   .work-item.expanded .work-media img {
     width: 45%;
     height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     transition: width 0.3s ease;
   }
   
