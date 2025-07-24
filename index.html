@@ -141,19 +141,17 @@
           
           // 展開時にその位置までスクロール
           if (item.classList.contains("expanded")) {
-            // 展開アニメーション完了を待つ
+            // シンプルに展開完了後の位置に調整する方法
             setTimeout(() => {
-              // ヘッダーの高さを考慮してオフセットを設定
               const headerOffset = 70;
-              const elementPosition = item.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              const expandedItemRect = item.getBoundingClientRect();
+              const targetY = expandedItemRect.top + window.pageYOffset - headerOffset;
               
-              // スムーズスクロール
               window.scrollTo({
-                top: offsetPosition,
+                top: Math.max(0, targetY),
                 behavior: "smooth"
               });
-            }, 150); // CSSのtransition時間に合わせる
+            }, 500); // 展開アニメーション完了後
           }
         });
       });
