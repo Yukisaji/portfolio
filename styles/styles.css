@@ -12,9 +12,9 @@
   }
   
   body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    background-color: #0d1117;
+    color: #e0e0e0;
     line-height: 1.6;
     /* padding-top: 60px; */
     margin-top: 60px;
@@ -22,12 +22,14 @@
   
   /* ヘッダー */
   header {
-    background-color: #f7f7f7;
+    background-color: #161b22;
     padding-top: 20px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: 1px solid #30363d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
   
   header nav ul {
@@ -44,14 +46,17 @@
   }
   
   nav ul li a {
-    color: #333;
+    color: #58a6ff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
   }
   
   nav ul li a:hover {
-    color: #747474;
+    color: #79c0ff;
+    text-shadow: 0 0 8px #58a6ff;
   }
   
   .header-line {
@@ -66,15 +71,31 @@
     padding: 40px 20px;
     max-width: 1000px;
     margin: auto;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    margin-top: 20px;
   }
    
   h1 {
     font-size: 2em;
-    margin-bottom: 10px;
-    border-left: 4px solid #aaaaaa;
-    padding-left: 15px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-weight: 600;
+    color: #58a6ff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
     position: relative;
     display: block;
+  }
+  
+  h1::before {
+    content: "< ";
+    color: #484f58;
+  }
+  
+  h1::after {
+    content: " />";
+    color: #484f58;
   }
   
   h1::after {
@@ -125,11 +146,12 @@
   
   .work-item {
     flex: 0 0 calc(33.33% - 20px);
-    background-color: #fff;
+    background-color: #0d1117;
     padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #30363d;
+    border-radius: 6px;
     cursor: pointer;
-    transition: flex-basis 0.3s ease, transform 0.3s ease;
+    transition: flex-basis 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
   }
   
   /* 展開時 */
@@ -167,11 +189,33 @@
   
   /* タイトル：通常は左寄せ。展開時はwork-media内で中央揃え */
   .work-title {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.0em;
     margin: 0 0 10px 0;
     text-align: left;
     transition: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  
+  .work-title::before {
+    content: attr(data-line);
+    color: #484f58;
+    font-size: 0.9em;
+    font-weight: normal;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    flex-shrink: 0;
+  }
+  
+  .work-item.expanded .work-title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
   }
   
   .work-item.expanded .work-media {
@@ -207,16 +251,54 @@
   /* work-detail用見出し */
   .work-detail-heading {
     font-weight: bold;
-    margin: 10px 0 5px;
+    margin: 20px 0 10px;
     font-size: 1.0em;
+    color: #58a6ff;
+    position: relative;
+    padding-left: 15px;
+  }
+  
+  .work-detail-heading::before {
+    content: "//";
+    position: absolute;
+    left: 0;
+    color: #484f58;
   }
   
   /* work-detail内リスト：黒丸 */
   .work-detail ul li {
     list-style-type: disc;
     list-style-position: inside;
-    color: #000;
+    color: #e0e0e0;
     margin-left: 20px;
+  }
+  
+  /* 技術スタックバッジ */
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .tech-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #1f2937;
+    color: #58a6ff;
+    border: 1px solid #30363d;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    transition: all 0.3s ease;
+  }
+  
+  .tech-badge:hover {
+    background-color: #30363d;
+    border-color: #58a6ff;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(88, 166, 255, 0.3);
   }
   
   /* 画像の基本スタイル */
@@ -253,7 +335,8 @@
   /* ホバー時の拡大効果 */
   .work-item:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #58a6ff;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
   }
   
   /* レスポンシブ対応 */
@@ -329,5 +412,16 @@
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+  }
+  
+  /* フッター */
+  footer {
+    background-color: #161b22;
+    color: #8b949e;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid #30363d;
+    font-size: 0.9em;
   }
   
