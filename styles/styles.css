@@ -183,6 +183,14 @@
     gap: 20px;
   }
   
+  /* 画像と動画の上端を揃える */
+  .work-item.expanded .work-media img,
+  .work-item.expanded .work-media .video-container {
+    flex-shrink: 0;
+    align-self: flex-start;
+    vertical-align: top;
+  }
+  
   /* 詳細情報 */
   .work-detail {
     max-height: 0;
@@ -225,7 +233,8 @@
   .work-item.expanded .video-container {
     display: block;
     width: 45%;
-    margin-bottom: 10px;
+    margin: 0;
+    padding: 0;
   }
 
   .video-container iframe {
@@ -233,6 +242,9 @@
     height: auto;
     aspect-ratio: 16 / 9;
     border-radius: 5px;
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 
   
