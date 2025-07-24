@@ -150,11 +150,15 @@
     max-width: 400px;
     margin: 0;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
   }
   
   /* 展開時の画像はコンテナ幅いっぱいに */
   .work-item.expanded .work-media img {
-    width: 100%;
+    width: 45%;
     height: auto;
     transition: width 0.3s ease;
   }
@@ -163,15 +167,20 @@
   .work-title {
     font-weight: bold;
     font-size: 1.0em;
-    margin: 0 0 0;
+    margin: 0 0 10px 0;
     text-align: left;
     transition: inherit;
   }
   
   .work-item.expanded .work-media {
-    width: 50%;
+    width: 100%;
+    max-width: none;
     margin: 0 0 0 0;
     text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
   }
   
   /* 詳細情報 */
@@ -209,8 +218,13 @@
   }
 
   /* YouTube動画コンテナ - work-mediaと同じサイズに */
+  .video-container {
+    display: none;
+  }
+  
   .work-item.expanded .video-container {
-    width: 50%;
+    display: block;
+    width: 45%;
     margin-bottom: 10px;
   }
 
