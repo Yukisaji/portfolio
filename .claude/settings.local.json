@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Read(/C:\\Root\\Project\\VAcaAudition2/**)",
+      "Read(/C:\\Root\\Project\\VAcaAudition2/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
